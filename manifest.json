@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Bing Searcher",
+    "version": "1.0.1",
+    "description": "Searches Bing for random text 30 times",
+    "background": {
+      "service_worker": "src/background.js"
+    },
+    "permissions": [
+      "tabs"
+    ],
+    "action": {
+      "default_popup": "page/popup.html"
+    }
+  }
