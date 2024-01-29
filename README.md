@@ -1,4 +1,4 @@
-# Bing Search Extension for MS Rewards
+# Bing Search Extension
 
 This is a straightforward browser extension designed for Bing searches.
 The extension automates the search of random text on Bing, reaching the daily limit of 30 searches.
