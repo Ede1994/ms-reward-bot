@@ -9,14 +9,16 @@ function searchBing() {
       counter++;
       // Send a message to the popup with the updated counter
       chrome.runtime.sendMessage({ command: "updateCounter", counter: counter });
-      if (counter >= 40) {
-        stopSearch(); // Stop the search when the counter reaches 30
+      // Stop the search when the counter reaches 35
+      if (counter >= 35) {
+        stopSearch(); 
       }
+      // Close the tab after 15 seconds
       setTimeout(() => {
-        chrome.tabs.remove(tab.id); // Close the tab after 10 seconds
-      }, 10000);
+        chrome.tabs.remove(tab.id);
+      }, 15000);
     });
-  }, 2000); // Search every 2 seconds
+  }, 5000); // Search every 5 seconds
 }
 
 
@@ -25,6 +27,7 @@ function stopSearch() {
   isRunning = false;
   chrome.action.setBadgeText({ text: "" });
 }
+
 
 function startSearch() {
   searchBing();
@@ -40,6 +43,7 @@ function emergencyStop() {
   chrome.action.setBadgeBackgroundColor({ color: "#ff0000" });
 }
 
+
 chrome.action.onClicked.addListener((tab) => {
   if (isRunning) {
     stopSearch();
@@ -47,6 +51,7 @@ chrome.action.onClicked.addListener((tab) => {
     startSearch();
   }
 });
+
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.command === "start") {

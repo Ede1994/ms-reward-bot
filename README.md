@@ -1,7 +1,14 @@
 # Bing Search Extension
 
 This is a straightforward browser extension designed for Bing searches.
-The extension automates the search of random text on Bing, reaching the daily limit of 30 searches.
+The extension automates the search of random text on Bing, reaching the daily limit of 35 searches.
+
+- [Bing Search Extension](#bing-search-extension)
+  - [Compatibility](#compatibility)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Enable MS Edge Developer Mode](#enable-ms-edge-developer-mode)
+  - [License](#license)
 
 
 ## Compatibility
@@ -17,7 +24,14 @@ The extension is compatible with the Edge browsers.
 ## Usage
 1. Open Edge -> Bing.com in your browser (and make sure you are signed in to your Microsoft account).
 2. Click on the extension icon in your browser.
-3. The extension will automatically search random text 30 times on Bing.
+3. The extension will automatically search random text 35 times on Bing.
+
+### Enable MS Edge Developer Mode
+To enable developer mode in Microsoft Edge, you need to:
+- Open Microsoft Edge.
+- Click the More Options button (three dots) in upper right corner, and then select Extensions from the drop-down menu.
+- Turn on the Developer mode option at the bottom of the left panel.
+- After you toggle it on, you’ll see three buttons appear next to “Installed extensions”.
 
 ## License
 [MIT License](LICENSE)
